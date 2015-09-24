@@ -3,7 +3,7 @@ public class main
     public static void main(String[] args)
     {
         String name = "Bob";
-        double salary = 100050;
+        double salary = 100052.45;
         double taxP = 20;
         System.out.println("Salary with tax: " + Tax(name, salary, taxP));
 
@@ -16,6 +16,7 @@ public class main
         System.out.println("Taking " + taxP + "% off due to tax");
         salary = salary / 100;
         salary = salary * (100 - taxP);
+        salary = Math.round(salary * 100) / 100.0;
         System.out.println("finished calculating tax for " + name);
         return salary;
     }
